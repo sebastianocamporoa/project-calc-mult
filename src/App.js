@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+//Bootstrap
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+//components
+import Header from "./components/Header/Header";
+
+const App = () => (
+  <>
+    <div class="context">
+      <Container className="p-3">
+        <h1 className="header">Proyecto final calculo multivariado</h1>
+        <Header>
+          El objetivo de este proyecto es mostrar los temas vistos en la clase
+          de calculo multivariado. Desarrollado por: Sebastián Ocampo Roa, Carol
+          Perdomo, Julian García y Esteban Alvarado.
+        </Header>
+      </Container>
+      <Container className="p-5">
+        <Form.Select
+          size="lg"
+          onChange={() => {
+            alert("aaaa");
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <option>Seleccione un tema</option>
+          <option value="1">Laboratorio</option>
+        </Form.Select>
+        <br />
+      </Container>
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </div>
-  );
-}
+  </>
+);
 
 export default App;
